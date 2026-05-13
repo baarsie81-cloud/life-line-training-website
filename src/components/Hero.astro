@@ -1,6 +1,27 @@
 ---
-interface Props { eyebrow: string; title: string; intro: string; primaryHref?: string; primaryLabel?: string; secondaryHref?: string; secondaryLabel?: string; }
-const { eyebrow, title, intro, primaryHref = "/contact/", primaryLabel = "Neem contact op", secondaryHref, secondaryLabel } = Astro.props;
+interface Props {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  primaryHref?: string;
+  primaryLabel?: string;
+  secondaryHref?: string;
+  secondaryLabel?: string;
+  image?: string;
+  imageAlt?: string;
+}
+
+const {
+  eyebrow,
+  title,
+  intro,
+  primaryHref = "/contact/",
+  primaryLabel = "Neem contact op",
+  secondaryHref,
+  secondaryLabel,
+  image,
+  imageAlt = ""
+} = Astro.props;
 ---
 <section class="relative overflow-hidden bg-lifeline-sand">
   <img src="/assets/brand/brand-shape-04.svg" alt="" class="absolute right-0 top-0 hidden h-full w-auto object-cover opacity-90 md:block" />
@@ -15,10 +36,23 @@ const { eyebrow, title, intro, primaryHref = "/contact/", primaryLabel = "Neem c
       </div>
     </div>
     <div class="relative hidden min-h-80 lg:block">
-      <div class="absolute inset-0 rounded-md bg-white/65 shadow-soft"></div>
-      <img src="/assets/brand/brand-shape-01.svg" alt="" class="absolute -left-10 top-12 w-72" />
-      <img src="/assets/brand/logo-round-blue.svg" alt="" class="absolute right-8 top-10 w-72" />
-      <div class="absolute bottom-8 left-8 right-8 rounded-md bg-lifeline-blueDark p-6 text-white"><p class="text-sm font-bold uppercase tracking-[0.2em] text-lifeline-orange">Sinds 2003</p><p class="mt-3 text-2xl font-black">Trainingen die passen bij de praktijk waarin mensen moeten handelen.</p></div>
+      {image ? (
+        <div class="absolute inset-0 overflow-hidden rounded-md shadow-soft">
+          <img src={image} alt={imageAlt} class="h-full w-full object-cover" loading="eager" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-lifeline-blueDark/70 via-lifeline-blueDark/10 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 right-8 rounded-md bg-white/95 p-6 shadow-soft">
+            <p class="text-sm font-bold uppercase tracking-[0.2em] text-lifeline-orange">Sinds 2003</p>
+            <p class="mt-3 text-2xl font-black leading-tight text-lifeline-blueDark">Praktijkgerichte training, herkenbaar voor de mensen die moeten handelen.</p>
+          </div>
+        </div>
+      ) : (
+        <>
+          <div class="absolute inset-0 rounded-md bg-white/65 shadow-soft"></div>
+          <img src="/assets/brand/brand-shape-01.svg" alt="" class="absolute -left-10 top-12 w-72" />
+          <img src="/assets/brand/logo-round-blue.svg" alt="" class="absolute right-8 top-10 w-72" />
+          <div class="absolute bottom-8 left-8 right-8 rounded-md bg-lifeline-blueDark p-6 text-white"><p class="text-sm font-bold uppercase tracking-[0.2em] text-lifeline-orange">Sinds 2003</p><p class="mt-3 text-2xl font-black">Trainingen die passen bij de praktijk waarin mensen moeten handelen.</p></div>
+        </>
+      )}
     </div>
   </div>
 </section>
