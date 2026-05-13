@@ -19,7 +19,7 @@ export const navItems = [
 
 export const trainingCards = [
   { title: "BLS", href: "/bls/", eyebrow: "Reanimatie en AED", description: "Leer volwassenen reanimeren en een AED veilig inzetten volgens de richtlijnen van de Nederlandse Reanimatie Raad.", image: "/assets/photos/bls-reanimatie-aed.jpg" },
-  { title: "PBLS", href: "/pbls/", eyebrow: "Kinderen en baby's", description: "Praktische training voor hulpverlening aan kinderen en baby's, met aandacht voor handelen onder druk.", image: "/assets/photos/bls-training-logo-detail.jpg" },
+  { title: "PBLS", href: "/pbls/", eyebrow: "Kinderen en baby's", description: "Praktische training voor hulpverlening aan kinderen en baby's, met aandacht voor handelen onder druk.", image: "/assets/photos/bls-aed-training-breed.jpg" },
   { title: "Instructeursopleidingen", href: "/instructeursopleidingen/", eyebrow: "NRR en didactiek", description: "Word BLS- of PBLS-instructeur en ontwikkel naast technische vaardigheden ook je didactische kracht.", image: "/assets/photos/instructie-aan-bad.jpg" },
   { title: "Waterveiligheid", href: "/waterveiligheid/", eyebrow: "Zwembadbranche", description: "Trainingen voor zwembadmedewerkers en professionals die verdrinkingsongevallen willen voorkomen.", image: "/assets/photos/waterveiligheid-rescue-tube.jpg" }
 ];
@@ -53,7 +53,7 @@ export const pages = {
     gallery: [
       { src: "/assets/photos/bls-reanimatie-aed.jpg", alt: "Reanimatietraining met AED naast het slachtoffer." },
       { src: "/assets/photos/waterveiligheid-rescue-tube.jpg", alt: "Reddingsmateriaal wordt klaargehouden bij het zwembad." },
-      { src: "/assets/photos/bls-training-logo-detail.jpg", alt: "Life-Line Trainingen logo op trainingsmateriaal." }
+      { src: "/assets/photos/instructeur-zwembad-breed.jpg", alt: "Life-Line instructeur tijdens een praktijktraining." }
     ],
     sections: [
       { heading: "Kies de training die past bij jouw situatie", text: "Alle trainingen zijn gericht op toepassen in de praktijk. Open inschrijving is mogelijk, en veel trainingen kunnen ook op locatie worden verzorgd." },
@@ -70,7 +70,7 @@ export const pages = {
     heroAlt: "BLS training met reanimatiepop en AED aan de badrand.",
     gallery: [
       { src: "/assets/photos/bls-reanimatie-aed.jpg", alt: "Borstcompressies oefenen op een reanimatiepop." },
-      { src: "/assets/photos/bls-training-logo-detail.jpg", alt: "Life-Line logo op trainingshesje." }
+      { src: "/assets/photos/bls-aed-training-breed.jpg", alt: "BLS training met reanimatiepop en AED." }
     ],
     sections: [
       { heading: "Praktisch oefenen volgens duidelijke stappen", text: "Je oefent borstcompressies, beademingen, AED-gebruik en samenwerking met omstanders in herkenbare scenario's." },
@@ -83,8 +83,8 @@ export const pages = {
     eyebrow: "PBLS",
     h1: "Reanimatie en eerste handelen bij kinderen en baby's.",
     intro: "PBLS vraagt om kennis, rust en veel oefening. In deze training leer je hoe je handelt bij levensbedreigende situaties bij kinderen en baby's.",
-    heroImage: "/assets/photos/bls-training-logo-detail.jpg",
-    heroAlt: "Detail van Life-Line trainingsmateriaal tijdens een reanimatietraining.",
+    heroImage: "/assets/photos/bls-aed-training-breed.jpg",
+    heroAlt: "AED en reanimatiepop tijdens een praktijksituatie.",
     gallery: [
       { src: "/assets/photos/bls-reanimatie-aed.jpg", alt: "Reanimatievaardigheden worden praktisch geoefend." },
       { src: "/assets/photos/bls-aed-training-breed.jpg", alt: "AED en reanimatiepop tijdens een praktijksituatie." }
